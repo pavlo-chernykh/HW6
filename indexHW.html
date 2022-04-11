@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW56</title>
+</head>
+<body>
+  <script>
+    const cylinder = {
+      cylRadius: 2,
+      cylHeight: 6,
+      getVolume() {
+        const cylVolume = Math.PI * (this.cylRadius ** 2) * this.cylHeight;
+        return cylVolume; 
+      },
+      getTotalSurfaceArea() {
+        const cylTotalSurfaceArea = 2 * Math.PI * this.cylRadius * (this.cylRadius + this.cylHeight);
+        return cylTotalSurfaceArea;
+      }
+
+    }
+    const cylVolResult = cylinder.getVolume();
+    const cylTotalSurfaceAreaResult = cylinder.getTotalSurfaceArea();
+    console.log(cylVolResult);
+    console.log(cylTotalSurfaceAreaResult);
+
+    function getResult(num1, num2, symbol) {
+      if (symbol === '+') {
+        return num1 + num2;
+      } else if (symbol === '-'){
+        return num1 - num2;
+      } else if (symbol === '*'){
+        return num1 * num2;
+      } else if (symbol === '/'){
+        return num1 / num2;
+      } else if (symbol === '%'){
+        return num1 % num2;
+      } else if (symbol === '**'){
+        return num1 ** num2;
+      } else {
+        return 'please choose another operator'
+      }
+    }
+
+    const getRes = getResult(11, 2 , '**');
+    console.log(getRes);
+
+
+    function isCharPresent(string, char) {
+      let isCharFind = false;
+
+      const arr = string;
+      for (let index = 0; index < arr.length; index++) {
+       
+        let letter = arr[index];
+        
+        console.log(letter);
+        if (letter === char) {
+          isCharFind = true;
+        }
+      }
+      return isCharFind;  
+    }
+
+    const result3 = isCharPresent('Valera', 'r');
+    console.log(result3);
+
+    
+
+    function charIndexOf(string, char) {
+      let isCharFind = -1;
+
+      const arr = string;
+      for (let index = 0; index < arr.length; index++) {
+       
+        let letter = arr[index];
+        
+        console.log(letter);
+        if (letter === char) {
+          isCharFind = index;
+        }
+      }
+      return isCharFind;  
+    }
+
+    const result = charIndexOf('Oleg', 'e');
+    console.log(result);
+
+
+  </script>
+</body>
+</html>
